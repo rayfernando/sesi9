@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung luas segitiga</title>
+</head>
+<body>
+    <h1>Menghitung luas segitiga</h1>
+    <label for="Alas">Masukkan alas</label>
+    <input type="number" id="Alas" name="Alas" required>
+    <br><br>
+    <label for="tinggi">Masukkan tinggi</label>
+    <input type="number" id="tinggi" name="tinggi" required>
+    <br><br>
+    <button onclick="hitungluas()">Hitung</button>
+    <br><br>
+    <p id="Hasil"></p>
+
+    <script>
+        function hitungluas() {
+            const Alas = document.getElementById("Alas").value; //ambil nilai sisi dari input
+            const tinggi = document.getElementById("tinggi").value; //ambil nilai sisi dari input
+            const luas = 0.5 * Alas * tinggi; // Menghitung luas persegi
+            document.getElementById("Hasil").innerHTML= " Luas segitiga dengan Alas " + Alas + "dan tinggi" + tinggi + "adalah " + luas;
+        }
+    </script>
+</body>
+</html>
